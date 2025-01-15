@@ -10,7 +10,7 @@
                     <group>
                         <field name="name"/>
                         <!-- Upload một tệp -->
-                        <field name="single_file" filename="single_file_name" widget="attachment" options="{'no_delete': True}"/>
+                        <field name="single_file" filename="single_file_name" widget="attachment" readonly="id != False"/>
                         <field name="single_file_name" invisible="1"/>
 
                         <!-- Upload nhiều tệp -->
