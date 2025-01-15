@@ -1,0 +1,28 @@
+<templates xml:space="preserve">
+    <t t-name="awesome_owl.Playground">
+        <div>
+            <h1>Playground with Counters</h1>
+            <Counter onChange="incrementSum.bind(this)"/>
+            <Counter onChange="incrementSum.bind(this)"/>
+            <p>Sum of counters: <t t-esc="state.sum" /></p>
+        </div>
+
+        <div>
+            <h1>Playground with Cards</h1>
+            <!-- Card 1: Chèn đoạn văn bản -->
+            <Card title="'Card 1'">
+                <p>This is the content of Card 1.</p>
+            </Card>
+            <!-- Card 2: Chèn một nút -->
+            <Card title="'Card 2'">
+                <button class="btn btn-primary">Click me!</button>
+            </Card>
+            <!-- Card 3: Chèn một component khác (ví dụ: Counter) -->
+            <Card title="'Card 3'">
+                <Counter/>
+            </Card>
+        </div>
+
+        <TodoList/>
+    </t>
+</templates>
