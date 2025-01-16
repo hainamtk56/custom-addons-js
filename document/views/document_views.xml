@@ -10,11 +10,8 @@
                     <group>
                         <field name="name"/>
                         <!-- Upload một tệp -->
-                        <field name="single_file" filename="single_file_name" widget="attachment" readonly="id != False"/>
-                        <field name="single_file_name" invisible="1"/>
-
-                        <!-- Upload nhiều tệp -->
-                        <field name="multi_files" widget="many2many_binary"/>
+                        <field name="file" filename="file_name" widget="attachment"/>
+                        <field name="file_name" invisible="1"/>
                     </group>
                 </sheet>
                 <!-- Chatter -->
@@ -44,6 +41,6 @@
     <!-- Menu -->
     <menuitem
         id="menu_document"
-        name="Quản lý tài liệu"
+        name="Document"
         action="action_document"/>
 </odoo>
