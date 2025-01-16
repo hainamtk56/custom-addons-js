@@ -1,0 +1,9 @@
+<xpath expr="//button[@title='Download']" position="attributes">
+            <attribute name="t-attf-class" remove="bg-300" add="{{ attachment.voice ? 'bg-100' : 'bg-300'}}"/>
+        </xpath>
+<!--        <xpath expr="//button[@title='Remove']" position="replace"/>-->
+
+
+
+
+get showDelete()
