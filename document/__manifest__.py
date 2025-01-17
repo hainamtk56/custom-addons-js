@@ -10,7 +10,7 @@
     ],
     'assets': {
             'web.assets_backend': [
-                'custom_module/static/src/js/ir_attachment_disable_delete.js',
+                'document/static/src/js/ir_attachment_disable_delete.js',
             ],
         },
     'installable': True,

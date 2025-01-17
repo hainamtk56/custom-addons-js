@@ -1,13 +1,14 @@
-odoo.define('custom_module.ir_attachment_disable_delete', function (require) {
-    "use strict";
+/** @odoo-module */
 
-    const AttachmentBox = require('mail.attachment_box');
+import { patch } from '@web/core/utils/patch';
+import { AttachmentList } from '@mail/core/common/attachment_list';
 
-    AttachmentBox.include({
-        _getAttachmentActions(attachment) {
-            const actions = this._super(attachment);
-            // Loại bỏ nút xóa khỏi danh sách hành động
-            return actions.filter(action => action.name !== 'delete');
-        },
-    });
+patch(AttachmentList.prototype, {
+    setup() {
+        this._super(...arguments);
+    },
+
+    get showDelete() {
+        return false;
+    }
 });
